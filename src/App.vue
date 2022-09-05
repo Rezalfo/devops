@@ -71,7 +71,7 @@ const searchCity = (inputCity) => {
     .then((response) => {
       // handle success
       console.log(response)
-
+      
       weatherData.value.city = response.data.name
       weatherData.value.weatherSummary = response.data.weather[0].main
       weatherData.value.weatherDescription = response.data.weather[0].description
