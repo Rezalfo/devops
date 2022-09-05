@@ -66,12 +66,11 @@ jobs:
             echo "Status:    ${{ steps.buildx.outputs.status }}"
             echo "Flags:     ${{ steps.buildx.outputs.flags }}"
             echo "Platforms: ${{ steps.buildx.outputs.platforms }}"
-          
 
         - name: Build 
           uses: docker/build-push-action@v3
-           with:
-             tags: rezalfo/docker-vuejs:latest
+          with:
+           tags: rezalfo/docker-vuejs:latest
         
         
        
