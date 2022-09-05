@@ -26,10 +26,11 @@ jobs:
       - uses: actions/checkout@v3
 
       # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          npm install
-          npm run test:unit
+      - name: Setup
+        run: npm install
+        
+      - name: Test 
+        run: npm run test:unit
 
   build:
     #Build the application
@@ -38,9 +39,10 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       
-      - name: Build the app
-        run: |
-          npm ci
-          npm run build
+      - name: Install dependencies
+        run: npm ci
+        
+      - name: Build
+        run: npm run build
        
           
